@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body less-padding">
+            <div class="row">
+                <div class="col-md-3 center">
+                    <span class="view-icon" (click)="view='view-patients'"><i class="fa fa-list-alt"></i></span><br>
+                    <span class="view-name">Citizens</span>
+                </div>
+                <div class="col-md-3 center">
+                    <span class="view-icon" (click)="view='view-state'"><i class="fa fa-list-alt"></i></span><br>
+                    <span class="view-name">State</span>
+                </div>
+                <div class="col-md-3 center">
+                    <span class="view-icon" (click)="view='view-district'"><i class="fa fa-list-alt"></i></span><br>
+                    <span class="view-name">District</span>
+                </div>
+                <div class="col-md-3 center">
+                    <span class="view-icon" (click)="view='view-settings'"><i class="fa fa-list-alt"></i></span><br>
+                    <span class="view-name">Settings</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div *ngIf="view=='view-patients'">
+        <view-patients></view-patients>
+    </div>
+    <div *ngIf="view=='view-state'">
+        <view-state></view-state>
+    </div>
+    <div *ngIf="view=='view-district'">
+        <view-district></view-district>
+    </div>
+    <div *ngIf="view=='view-settings'">
+        <view-quarantine-settings></view-quarantine-settings>
+    </div>
+</div>

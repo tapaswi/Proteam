@@ -1,0 +1,59 @@
+.patient-list, .patient-list-group{
+    margin-top: 5px;
+}
+
+.totalInfo {
+    font-size: small;
+    font-weight: 400;
+    padding: 1.5em;
+}
+
+.name{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.risk {
+    color: darkred;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.date {
+    font-size: small;
+    padding: 10px;
+}
+
+.phone {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.right {
+    text-align: right;
+}
+
+.c-checkbox {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+    float: left;
+}
+
+.btn-search{
+    color: white;
+    background-color: #02afae;
+}
+.btn-send {
+    color: white;
+    background-color: #fe876f;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: #0165b9!important;
+}
+
+.t-border {
+    background: white;
+    border: 1px solid rgba(0,0,0,.125);
+}

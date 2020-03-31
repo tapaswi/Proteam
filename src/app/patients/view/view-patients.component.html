@@ -1,0 +1,106 @@
+<div class="container patient-list">
+    <!--Search-->
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search..." >
+        <div class="input-group-append">
+            <button class="btn btn-send" type="button">Risk
+            </button>
+            <button class="btn btn-search" type="button"><i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-send" type="button" (click)="allocate.show()"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    <!--Total count-->
+    <span class="totalInfo">Showing {{totalCount}} assessments</span>
+
+    <!--Patient List-->
+    <ul class="list-group patient-list-group">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-md-6 left">
+                    <div class="custom-control custom-checkbox c-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked1">
+                        <label class="custom-control-label" for="defaultUnchecked1"></label>
+                    </div>
+                    <div class="info">
+                        <div><span class="name">Kellen, India</span></div>
+                        <div><span class="risk">High Risk</span><span class="date">14/3/2020</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div><span class="phone">4576232932</span></div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-md-6 left">
+                    <div class="custom-control custom-checkbox c-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked2">
+                        <label class="custom-control-label" for="defaultUnchecked2"></label>
+                    </div>
+                    <div class="info">
+                        <div><span class="name">Kellen, India</span></div>
+                        <div><span class="risk">High Risk</span><span class="date">14/3/2020</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div><span class="phone">4576232932</span></div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-md-6 left">
+                    <div class="custom-control custom-checkbox c-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked3">
+                        <label class="custom-control-label" for="defaultUnchecked3"></label>
+                    </div>
+                    <div class="info">
+                        <div><span class="name">Kellen, India</span></div>
+                        <div><span class="risk">High Risk</span><span class="date">14/3/2020</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div><span class="phone">4576232932</span></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div bsModal #allocate="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" [config]="{backdrop: 'static'}">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-md-10 padding-left-0">
+                    <span>Assignment</span>
+                </div>
+                <div class="col-md-2">
+                    <div class="fa fa-times pull-right pointer" data-toggle="modal" (click)="allocate.hide()"></div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="custom-control custom-checkbox c-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked1">
+                    <label class="custom-control-label" for="defaultUnchecked1">PHC</label>
+                </div>
+                <div class="custom-control custom-checkbox c-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked1">
+                    <label class="custom-control-label" for="defaultUnchecked1">CHC</label>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="pull-right form-button-container">
+                    <button type="button" class="btn btn-success btn-form" data-toggle="modal" (click)="allocatePatients()">
+                        <span class="sign-text">Send</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <form class="form-signin">
+            <div class="form-label-group">
+              <select class="form-control" name="selectedRole" [(ngModel)]="selectedRole">
+                <option *ngFor="let role of roles" [ngValue]="role.id"
+                  [selected]="role.id == selectedRole">
+                  {{ role.name }}
+                </option>
+              </select>
+              
+            </div>
+
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="password" required>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" (click)="login('home')">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+<div class="input-group lang-panel">
+  <input type="text" id="filter" class="form-control text" placeholder="Search" [(ngModel)]="filter">
+   -->
